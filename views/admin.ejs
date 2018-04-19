@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>admin</title>
+</head>
+<body>
+<label for="dirname">创建文件夹</label><input type="text" name="dirname" id="dirname" value=""> <input type="button" value="创建文件夹" id="create">
+<br>
+<br>
+
+
+
+<form action="/uploadpic" method="POST"  enctype="multipart/form-data">
+    <input type="file" name="uploadingpic">
+    <label for="uploaddir">上传到：</label>
+    <select name="uploaddir" id="uploaddir">
+        <% for(var i = 0; i < dirs.length; i++) { %>
+        <option value="<%=dirs[i]%>"><%=dirs[i]%></option>
+        <% }%>
+    </select>
+    <input type="submit" value="提交">
+</form>
+
+
+
+
+
+<script type="text/javascript">
+    var create = document.getElementById("create");
+    var dirname = document.getElementById("dirname");
+    create.onclick = function () {
+        //string
+        var dirtobe = dirname.value;
+        var url = "/createdir?dir=" + dirtobe;
+        window.location.href = url;
+    }
+
+</script>
+</body>
+</html>

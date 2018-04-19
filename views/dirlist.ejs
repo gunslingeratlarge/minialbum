@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>LIPHO</title>
+    <style type="text/css">
+        /*初始化*/
+        body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+        body{font:12px"宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+        a{color:#2d374b;text-decoration:none; font-weight:200}
+        a:hover{text-decoration:none}
+        em{font-style:normal}
+        li{list-style:none}
+        img{border:0;vertical-align:middle}
+        table{border-collapse:collapse;border-spacing:0}
+        p{word-wrap:break-word}
+
+        body {
+            background: #f8f8f8;
+        }
+        .w {
+            width: 1280px;
+            margin:0 auto;
+        }
+
+        ul li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .navlist li a{
+            text-decoration: none;
+            padding:0 20px;
+            color:#ffffff;
+            font: 14px/50px "Microsft Yahei";
+            display: inline-block;
+            font-weight: 200;
+        }
+
+        .navlist li a:hover {
+            background: #7f7f7f;
+        }
+
+        .navbar {
+            height: 50px;
+            background: #000;
+            /*opacity: 0.5;*/
+        }
+
+        .logo {
+            background: url("images/smalllogo.png") no-repeat center left;
+
+            display: inline-block;
+            width:60px;
+            text-indent: -9999em;
+            line-height:50px;
+        }
+
+        .logo:hover {
+            background: url("images/smalllogo.png") no-repeat center left !important;
+        }
+
+        .categories {
+            /*background: url("../images/122H.jpg") no-repeat;*/
+            /*background-size:cover;*/
+            min-height: 800px;
+        }
+
+        .category {
+            border-radius: 10px;
+            font:16px/175px "Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+            font-weight:300;
+            padding:0;
+            color:#fff;
+            /*font-family:"Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;*/
+            text-decoration: none;
+            display: inline-block;
+            height: 175px;
+            width: 175px;
+            background-size: cover;
+        }
+
+        .categories {
+            text-align: center;
+        }
+
+        .categories ul {
+            padding-top:50px;
+        }
+
+        .cate-title {
+            text-align: left;
+            font:20px/40px "Microsoft YaHei";
+            font-weight:300;
+            padding:40px 20px
+        }
+
+        .cate-title a {
+            font-size:16px;
+            padding-left:20px;
+        }
+        .cate-title span {
+            border-left:4px solid red;
+        }
+
+
+        .footer {
+            background: rgb(247,247,247);
+
+            font-size:14px;
+            text-align: center;
+            padding:20px;
+            border-top: 1px solid #d0d0d0;
+        }
+
+        .footer  a {
+            text-decoration: none;
+            color:#000;
+            font-size:14px;
+        }
+
+        .fr {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <div class="w">
+        <ul class="navlist">
+            <li class="logoli"><a href="#" class="logo">lipho</a></li>
+            <li><a href="/index">首页</a></li>
+            <li><a href="dirlist">分类</a></li>
+            <li><a href="#">活动</a></li>
+            <li><a href="#">短视频</a></li>
+            <li><a href="#">交流</a></li>
+            <li><a href="#">更多</a></li>
+
+            <li class="fr"><a href="#">登录</a></li>
+            <li class="fr"><a href="#">注册</a></li>
+        </ul>
+    </div>
+</div>
+<div class="categories">
+    <div class="w">
+        <div class="cate-title"><span>&nbsp;题材</span><a href="#">查看全部></a></div>
+        <ul>
+            <% for (var i = 0; i < titles.length; i++) { %>
+            <li>
+                <a href="<%=titles[i]%>" class="category" style=" background: url('uploads/风景/a.jpg'); background-size: cover;"><span><%=titles[i]%></span></a>
+            </li>
+            <% }%>
+        </ul>
+    </div>
+</div>
+<div class="footer">
+    <div class="m-ft2"><a target="_blank" rel="nofollow" href="http://www.lofter.com/contact">联系我们</a><span>|</span><a target="_blank" rel="nofollow" href="http://i.lofter.com/tag/招聘">招贤纳士</a><span>|</span><a target="_blank" rel="nofollow" href="http://www.lofter.com/app">移动客户端</a><span>|</span><a target="_blank" rel="nofollow" href="http://www.lofter.com/themes">风格模板</a><span>|</span><a target="_blank" rel="nofollow" href="http://i.lofter.com">官方博客</a></div>
+    <div style="margin-top:10px;">网易公司版权所有　©1997-2018　<a rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010002000017" style="position:relative;"><img src="http://l.bst.126.net/rsc/img/icon-police.png" style="width:14px;height:16px;position:absolute;left:0;top:0;"><span style="margin-left:18px;">浙公网安备 33010002000017号</span></a><span style="margin-left:20px;">ICP备：浙B2-20090185-5</span><span style="margin-left:20px;">增值电信业务经营许可证：浙B2-20090185</span></div>
+</div>
+</body>
+</html>
